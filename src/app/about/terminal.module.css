@@ -1,71 +1,62 @@
-:global(.terminal) {
-  position: relative;
+.terminal {
   background: #0d1117;
   border-radius: 6px;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
   overflow: hidden;
+  border: 1px solid #30363d;
 }
 
-:global(.terminalHeader) {
+.terminalHeader {
   background: #161b22;
-  padding: 12px 16px;
   border-bottom: 1px solid #30363d;
-  display: flex;
-  align-items: center;
 }
 
-:global(.terminalButtons) {
-  display: flex;
-  gap: 8px;
-  margin-right: 16px;
-}
-
-:global(.terminalButton) {
+.terminalButton {
   width: 12px;
   height: 12px;
-  border-radius: 50%;
+  cursor: pointer;
 }
 
-:global(.closeButton) {
+.closeButton {
   background: #ff5f56;
 }
 
-:global(.minimizeButton) {
+.minimizeButton {
   background: #ffbd2e;
 }
 
-:global(.maximizeButton) {
+.maximizeButton {
   background: #27c93f;
 }
 
-:global(.terminalTitle) {
+.terminalTitle {
   color: #8b949e;
   font-size: 14px;
-  flex-grow: 1;
-  text-align: center;
 }
 
-:global(.terminalContent) {
-  padding: 20px;
+.terminalContent {
   font-family: "Fira Code", "Consolas", monospace;
   line-height: 1.6;
+  background: #0d1117;
+  color: #c9d1d9;
 }
 
-:global(.command) {
+.command {
   color: #58a6ff;
-  margin-bottom: 8px;
+  font-weight: 500;
 }
 
-:global(.comment) {
+.comment {
   color: #79c0ff;
-  margin-bottom: 16px;
+  font-style: italic;
 }
 
-:global(.prompt) {
+.prompt {
   color: #58a6ff;
+  font-weight: 500;
 }
 
-:global(.cursor) {
+.cursor {
   display: inline-block;
   width: 8px;
   height: 16px;
@@ -84,33 +75,24 @@
   }
 }
 
-:global(.card) {
-  background: #161b22;
-  border: 1px solid #30363d;
-  border-radius: 6px;
-  padding: 16px;
-  margin-bottom: 16px;
-}
-
-:global(.listItem) {
-  display: flex;
-  align-items: center;
-  margin-bottom: 8px;
-}
-
-:global(.listItem:last-child) {
-  margin-bottom: 0;
-}
-
-:global(.arrow) {
+.arrow {
   color: #58a6ff;
-  margin-right: 8px;
+  font-weight: 500;
 }
 
-:global(.text) {
+.text {
   color: #c9d1d9;
 }
 
-:global(.textMuted) {
-  color: #8b949e;
+.textMuted {
+  color: #8b949e !important;
+}
+
+.card {
+  background: #161b22 !important;
+  border-color: #30363d !important;
+}
+
+.cardBody {
+  color: #c9d1d9;
 }
