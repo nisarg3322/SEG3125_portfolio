@@ -52,7 +52,7 @@ export default function Projects() {
         <div className="row g-4">
           {projects.map((project, index) => (
             <div key={index} className="col-md-6 col-lg-4">
-              <div className="card h-100">
+              <div className="card h-100 bg-light shadow-sm">
                 <img
                   src={project.image}
                   className="card-img-top"

@@ -1,4 +1,4 @@
-.terminal {
+:global(.terminal) {
   position: relative;
   background: #0d1117;
   border-radius: 6px;
@@ -6,7 +6,7 @@
   overflow: hidden;
 }
 
-.terminalHeader {
+:global(.terminalHeader) {
   background: #161b22;
   padding: 12px 16px;
   border-bottom: 1px solid #30363d;
@@ -14,58 +14,58 @@
   align-items: center;
 }
 
-.terminalButtons {
+:global(.terminalButtons) {
   display: flex;
   gap: 8px;
   margin-right: 16px;
 }
 
-.terminalButton {
+:global(.terminalButton) {
   width: 12px;
   height: 12px;
   border-radius: 50%;
 }
 
-.closeButton {
+:global(.closeButton) {
   background: #ff5f56;
 }
 
-.minimizeButton {
+:global(.minimizeButton) {
   background: #ffbd2e;
 }
 
-.maximizeButton {
+:global(.maximizeButton) {
   background: #27c93f;
 }
 
-.terminalTitle {
+:global(.terminalTitle) {
   color: #8b949e;
   font-size: 14px;
   flex-grow: 1;
   text-align: center;
 }
 
-.terminalContent {
+:global(.terminalContent) {
   padding: 20px;
   font-family: "Fira Code", "Consolas", monospace;
   line-height: 1.6;
 }
 
-.command {
+:global(.command) {
   color: #58a6ff;
   margin-bottom: 8px;
 }
 
-.comment {
+:global(.comment) {
   color: #79c0ff;
   margin-bottom: 16px;
 }
 
-.prompt {
+:global(.prompt) {
   color: #58a6ff;
 }
 
-.cursor {
+:global(.cursor) {
   display: inline-block;
   width: 8px;
   height: 16px;
@@ -84,7 +84,7 @@
   }
 }
 
-.card {
+:global(.card) {
   background: #161b22;
   border: 1px solid #30363d;
   border-radius: 6px;
@@ -92,25 +92,25 @@
   margin-bottom: 16px;
 }
 
-.listItem {
+:global(.listItem) {
   display: flex;
   align-items: center;
   margin-bottom: 8px;
 }
 
-.listItem:last-child {
+:global(.listItem:last-child) {
   margin-bottom: 0;
 }
 
-.arrow {
+:global(.arrow) {
   color: #58a6ff;
   margin-right: 8px;
 }
 
-.text {
+:global(.text) {
   color: #c9d1d9;
 }
 
-.textMuted {
+:global(.textMuted) {
   color: #8b949e;
 }
