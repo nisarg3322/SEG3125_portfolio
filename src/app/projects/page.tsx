@@ -1,36 +1,40 @@
+import Image from "next/image";
 export default function Projects() {
   const projects = [
     {
-      title: "Personal Portfolio",
+      title: "Dentist Website",
       description:
-        "A modern, responsive portfolio website showcasing my projects and skills. Built with Next.js and TypeScript, featuring smooth animations and a clean design.",
+        "A responsive dentist website showcasing services, team, and contact information. Built with Next.js and Bootstrap for a modern look and feel.",
       technologies: ["Next.js", "TypeScript", "Bootstrap", "CSS3"],
-      image: "/portfolio-preview.jpg",
-      link: "https://github.com/nisargpatel/portfolio",
-      demo: "https://nisargpatel.dev",
+      image: "/dentist_website.jpg",
+      link: "",
+      demo: "",
+      comingSoon: true,
     },
     {
-      title: "Course Management System",
+      title: "Puzzle game",
       description:
-        "A full-stack application for managing university courses, assignments, and student progress. Includes features like grade tracking and course material distribution.",
+        "A fun and interactive puzzle game where users can solve various puzzles. The game features a user-friendly interface and real-time updates.",
       technologies: ["React", "Node.js", "MongoDB", "Express", "JWT"],
-      image: "/cms-preview.jpg",
-      link: "https://github.com/nisargpatel/course-management",
-      demo: "https://cms-demo.nisargpatel.dev",
+      image: "/puzzle_game.jpg",
+      link: "",
+      demo: "",
+      comingSoon: true,
     },
     {
-      title: "Task Management App",
+      title: "E-Commerce Website",
       description:
-        "A collaborative task management application with real-time updates, team features, and deadline tracking. Built with modern web technologies for optimal performance.",
+        "An e-commerce website with user authentication, product listings, and a shopping cart. Users can browse products, add them to their cart, and proceed to checkout.",
       technologies: ["React", "Firebase", "Material-UI", "Redux"],
-      image: "/taskmanager-preview.jpg",
-      link: "https://github.com/nisargpatel/task-manager",
-      demo: "https://taskmanager.nisargpatel.dev",
+      image: "/e-commerce_site.jpg",
+      link: "",
+      demo: "",
+      comingSoon: true,
     },
     {
-      title: "E-Commerce Platform",
+      title: "Analytics Dashboard",
       description:
-        "A feature-rich e-commerce platform with user authentication, product management, shopping cart, and secure payment integration using Stripe.",
+        "A comprehensive analytics dashboard that provides insights into user behavior and application performance. It includes charts, graphs, and real-time data updates.",
       technologies: [
         "Next.js",
         "Node.js",
@@ -38,9 +42,10 @@ export default function Projects() {
         "Stripe",
         "Tailwind CSS",
       ],
-      image: "/ecommerce-preview.jpg",
-      link: "https://github.com/nisargpatel/ecommerce",
-      demo: "https://shop.nisargpatel.dev",
+      image: "/analytics_site.jpg",
+      link: "",
+      demo: "",
+      comingSoon: true,
     },
   ];
 
@@ -52,12 +57,21 @@ export default function Projects() {
         <div className="row g-4">
           {projects.map((project, index) => (
             <div key={index} className="col-md-6 col-lg-4">
-              <div className="card h-100 bg-light shadow-sm">
-                <img
+              {/* <div className="card h-100 bg-light shadow-sm position-relative"> */}
+              <div className="card h-100 bg-light shadow-sm position-relative overflow-hidden">
+                {/* Coming Soon Overlay */}
+                {project.comingSoon && (
+                  <div className="coming-soon-overlay d-flex flex-column justify-content-center align-items-center text-white">
+                    <span className="fs-4 fw-bold">🚧 Coming Soon</span>
+                  </div>
+                )}
+
+                <Image
                   src={project.image}
                   className="card-img-top"
                   alt={project.title}
-                  style={{ height: "200px", objectFit: "cover" }}
+                  width={200}
+                  height={200}
                 />
                 <div className="card-body">
                   <h3 className="h4 card-title">{project.title}</h3>
@@ -72,12 +86,15 @@ export default function Projects() {
                       </span>
                     ))}
                   </div>
+
                   <div className="d-flex gap-2">
                     <a
                       href={project.link}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="btn btn-outline-primary"
+                      className={`btn btn-secondary ${
+                        project.comingSoon ? "disabled" : ""
+                      }`}
                     >
                       View Code
                     </a>
@@ -85,7 +102,9 @@ export default function Projects() {
                       href={project.demo}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="btn btn-primary"
+                      className={`btn btn-primary ${
+                        project.comingSoon ? "disabled" : ""
+                      }`}
                     >
                       Live Demo
                     </a>

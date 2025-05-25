@@ -2,8 +2,9 @@ import styles from "./terminal.module.css";
 
 export default function About() {
   return (
-    <div className="min-vh-100 py-5">
-      <div className="container">
+    <div className="min-vh-100 py-3">
+      <div className="container pb-5">
+        <h2 className="display-4 fw-bold text-center pb-2">About Me</h2>
         <div className="row justify-content-center">
           <div className="col-lg-10">
             <div className={styles.terminal}>
@@ -24,7 +25,7 @@ export default function About() {
                 <div
                   className={`${styles.terminalTitle} text-center flex-grow-1`}
                 >
-                  about.tsx
+                  about_me.tsx
                 </div>
               </div>
               <div className={`${styles.terminalContent} p-4`}>

@@ -1,5 +1,5 @@
 html {
-  scroll-behavior: smooth;
+  scroll-behavior: smooth !important;
   scroll-padding-top: 76px; /* Height of navbar */
 }
 
@@ -12,6 +12,7 @@ html {
 
 .btn-primary {
   background-color: #bc6c25 !important;
+  border: none !important;
 }
 
 section {
@@ -20,12 +21,34 @@ section {
 
 #about {
   background-color: #283618;
+  color: #fefae0;
 }
 
 #projects {
   background-color: #fefae0 !important;
   color: #283618 !important;
 }
+.coming-soon-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.7);
+  backdrop-filter: blur(2px);
+  z-index: 10;
+  text-align: center;
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: scale(1.05);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
 .bg-primary {
   background-color: #606c38 !important;
 }
@@ -43,38 +66,4 @@ section {
 
 .card:hover {
   transform: translateY(-5px);
-}
-
-.navbar {
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-}
-
-.navbar-dark .navbar-nav .nav-link {
-  color: rgba(255, 255, 255, 0.8);
-  transition: color 0.3s ease;
-}
-
-.navbar-dark .navbar-nav .nav-link:hover,
-.navbar-dark .navbar-nav .nav-link.active {
-  color: white;
-}
-
-.badge {
-  font-weight: 500;
-  padding: 0.5em 0.8em;
-}
-
-/* Responsive adjustments */
-@media (max-width: 768px) {
-  section {
-    padding: 60px 0;
-  }
-
-  .hero-section {
-    padding-top: 60px;
-  }
-
-  html {
-    scroll-padding-top: 60px;
-  }
 }
