@@ -2,14 +2,14 @@ import Image from "next/image";
 export default function Projects() {
   const projects = [
     {
-      title: "Dentist Website",
+      title: "Bike Service Website",
       description:
-        "A responsive dentist website showcasing services, team, and contact information. Built with Next.js and Bootstrap for a modern look and feel.",
-      technologies: ["Next.js", "TypeScript", "Bootstrap", "CSS3"],
-      image: "/dentist_website.jpg",
-      link: "",
-      demo: "",
-      comingSoon: true,
+        "A responsive bike service website showcasing services, team, and contact information. Built with React.js and Bootstrap for a modern look and feel.",
+      technologies: ["React.js", "JavaScript", "Bootstrap", "CSS3"],
+      image: "/bikeService.jpg",
+      link: "https://lucky-kulfi-d18b6f.netlify.app/",
+      githubLink: "https://github.com/nisarg3322/SEG3125_assignment2",
+      comingSoon: false,
     },
     {
       title: "Puzzle game",
@@ -18,6 +18,7 @@ export default function Projects() {
       technologies: ["React", "Node.js", "MongoDB", "Express", "JWT"],
       image: "/puzzle_game.jpg",
       link: "",
+      githubLink: "",
       demo: "",
       comingSoon: true,
     },
@@ -28,6 +29,7 @@ export default function Projects() {
       technologies: ["React", "Firebase", "Material-UI", "Redux"],
       image: "/e-commerce_site.jpg",
       link: "",
+      githubLink: "",
       demo: "",
       comingSoon: true,
     },
@@ -44,6 +46,7 @@ export default function Projects() {
       ],
       image: "/analytics_site.jpg",
       link: "",
+      githubLink: "",
       demo: "",
       comingSoon: true,
     },
@@ -89,7 +92,7 @@ export default function Projects() {
 
                   <div className="d-flex gap-2">
                     <a
-                      href={project.link}
+                      href={project.githubLink}
                       target="_blank"
                       rel="noopener noreferrer"
                       className={`btn btn-secondary ${
@@ -99,14 +102,14 @@ export default function Projects() {
                       View Code
                     </a>
                     <a
-                      href={project.demo}
+                      href={project.link}
                       target="_blank"
                       rel="noopener noreferrer"
                       className={`btn btn-primary ${
                         project.comingSoon ? "disabled" : ""
                       }`}
                     >
-                      Live Demo
+                      Visit Project
                     </a>
                   </div>
                 </div>
