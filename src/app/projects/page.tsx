@@ -12,15 +12,14 @@ export default function Projects() {
       comingSoon: false,
     },
     {
-      title: "Puzzle game",
+      title: "Memory game",
       description:
-        "A fun and interactive puzzle game where users can solve various puzzles. The game features a user-friendly interface and real-time updates.",
-      technologies: ["React", "Node.js", "MongoDB", "Express", "JWT"],
-      image: "/puzzle_game.jpg",
-      link: "",
-      githubLink: "",
-      demo: "",
-      comingSoon: true,
+        "A fun and interactive memory game where users can match pairs of cards. The game features a user-friendly interface and real-time updates.",
+      technologies: ["React", "Node.js", "Bootstrap", "CSS3"],
+      image: "/memory_game.png",
+      link: "https://seg3125assignmnet.netlify.app/",
+      githubLink: "https://github.com/nisarg3322/SEG_3125_assignment3",
+      comingSoon: false,
     },
     {
       title: "E-Commerce Website",
