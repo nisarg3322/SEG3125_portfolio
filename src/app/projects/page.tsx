@@ -26,11 +26,10 @@ export default function Projects() {
       description:
         "An e-commerce website with user authentication, product listings, and a shopping cart. Users can browse products, add them to their cart, and proceed to checkout.",
       technologies: ["React", "Firebase", "Material-UI", "Redux"],
-      image: "/e-commerce_site.jpg",
-      link: "",
-      githubLink: "",
-      demo: "",
-      comingSoon: true,
+      image: "/e-commerce_site.png",
+      link: "https://seg3125assignment4.netlify.app/",
+      githubLink: "https://github.com/nisarg3322/SEG3125_Assignment4",
+      comingSoon: false,
     },
     {
       title: "Analytics Dashboard",
