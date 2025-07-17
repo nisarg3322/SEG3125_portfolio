@@ -42,11 +42,10 @@ export default function Projects() {
         "Stripe",
         "Tailwind CSS",
       ],
-      image: "/analytics_site.jpg",
-      link: "",
-      githubLink: "",
-      demo: "",
-      comingSoon: true,
+      image: "/analytics_site.png",
+      link: "https://seg3125assignment5.netlify.app/",
+      githubLink: "https://github.com/nisarg3322/SEG_3125_assignment5",
+      comingSoon: false,
     },
   ];
 
